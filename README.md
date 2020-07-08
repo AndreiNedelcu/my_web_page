@@ -8,4 +8,4 @@
   My personal website.
 </h1>
 
-<h3 align="center">This is my personal Website. Click on the image to go to the Demo on Netlify.</h3>
+<h3 align="center">This is my personal Website. Click on the image to go to the live Demo on Netlify.</h3>
