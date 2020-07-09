@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import "./index.css"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,19 +12,28 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Home" />
       <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
-            <header>
+            <header
+              style={{
+                marginTop: `2px`,
+              }}
+            >
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
+
+                  marginTop: `25px`,
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Link
+                  style={{ boxShadow: `none`, color: `#428000` }}
+                  to={node.fields.slug}
+                >
                   {title}
                 </Link>
               </h3>
